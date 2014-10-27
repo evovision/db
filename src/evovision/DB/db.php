@@ -15,7 +15,7 @@ class db {
     private $_db = null;
     protected static $_instance;
     private function __construct(){
-        if(!isset(self::$config) throw new \Exception('Database $config is not defined');
+        if(!isset(self::$config)) throw new \Exception('Database $config is not defined');
 	$this->_db = new PDO(self::$config['connections'][self::$config['default']]['driver'] . ":host=" . self::$config['connections'][self::$config['default']]['host'] . ";dbname=" . self::$config['connections'][self::$config['default']]['database'], self::$config['connections'][self::$config['default']]['username'], self::$config['connections'][self::$config['default']]['password']);
 
     }
