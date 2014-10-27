@@ -1,14 +1,8 @@
 {
-    "name": "evovision/db",
-    "authors": [
-        {
-            "name": "Bogdan Andrei",
-            "email": "bobodan41@gmail.com"
-        }
-    ],
+    "name": "EvoVision/db",
     "autoload": {
         "psr-0": {
-            "evovision\\DB": "src"
+            "EvoVision\\DB": "src"
         }
     }
 }

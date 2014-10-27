@@ -5,7 +5,7 @@
  * Date: 9/25/14
  * Time: 12:26 PM
  */
-namespace evovision\DB;
+namespace EvoVision\DB;
 use PDO;
 
 class db {
