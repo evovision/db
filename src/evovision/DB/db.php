@@ -151,7 +151,15 @@ class db {
         }
         return $this->_db->prepare("UPDATE $table SET $update WHERE id=$id")->execute($sendValues);
     }
-    /**
+    
+    public function getModel($table, $model, $id, $column = 'id'){
+        $prepare = $this->_db->prepare("SELECT * FROM $table WHERE $column = :id LIMIT 1");
+        $prepare->execute(array(':id'=>$id));
+        $prepare->setFetchMode(\PDO::FETCH_CLASS, $model);
+        return $prepare->fetch();
+    }
+
+     /**
      * Execute query and select one column only
      *
      * @param string $statement
