@@ -16,10 +16,10 @@ class db {
         'connections' => array(
             'mysql' => array(
                 'driver'    => 'mysql',
-                'host'      => 'localhost',
-                'database'  => 'mydb',
-                'username'  => 'root',
-                'password'  => 'bogdanandrei123',
+                'host'      => '',
+                'database'  => '',
+                'username'  => '',
+                'password'  => '',
                 'charset'   => 'utf8',
                 'collation' => 'utf8_unicode_ci',
                 'prefix'    => '',

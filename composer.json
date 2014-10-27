@@ -6,12 +6,9 @@
             "email": "bobodan41@gmail.com"
         }
     ],
-    "require": {
-
-    },
     "autoload": {
         "psr-0": {
-            "DB": "src/"
+            "evovision\\DB": "src"
         }
     }
 }
