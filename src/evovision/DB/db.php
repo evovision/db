@@ -10,27 +10,13 @@ use PDO;
 
 class db {
 
-    private static $config = array(
-        'fetch' => PDO::FETCH_CLASS,
-        'default' => 'mysql',
-        'connections' => array(
-            'mysql' => array(
-                'driver'    => 'mysql',
-                'host'      => '',
-                'database'  => '',
-                'username'  => '',
-                'password'  => '',
-                'charset'   => 'utf8',
-                'collation' => 'utf8_unicode_ci',
-                'prefix'    => '',
-            ),
-        ),
-    );
+    public static $config;
 
     private $_db = null;
     protected static $_instance;
     private function __construct(){
-        $this->_db = new PDO(self::$config['connections'][self::$config['default']]['driver'] . ":host=" . self::$config['connections'][self::$config['default']]['host'] . ";dbname=" . self::$config['connections'][self::$config['default']]['database'], self::$config['connections'][self::$config['default']]['username'], self::$config['connections'][self::$config['default']]['password']);
+        if(!isset(self::$config) throw new \Exception('Database $config is not defined');
+	$this->_db = new PDO(self::$config['connections'][self::$config['default']]['driver'] . ":host=" . self::$config['connections'][self::$config['default']]['host'] . ";dbname=" . self::$config['connections'][self::$config['default']]['database'], self::$config['connections'][self::$config['default']]['username'], self::$config['connections'][self::$config['default']]['password']);
 
     }
     private function __clone(){}
