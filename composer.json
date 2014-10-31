@@ -1,8 +1,8 @@
 {
-    "name": "EvoVision/db",
+    "name": "evovision/db",
     "autoload": {
         "psr-0": {
-            "EvoVision\\DB": "src"
+            "evovision\\DB": "src"
         }
     }
 }
